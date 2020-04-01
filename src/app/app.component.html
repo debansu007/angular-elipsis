@@ -1,0 +1,10 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<p *ngFor="let quot of newArr">
+  <strong>Blog number {{quot.id}} - </strong>
+  <span *ngIf="notClick != quot.id">{{sort(quot.str)}}</span>
+  <span *ngIf="notClick == quot.id">{{quot.str}}</span>
+  <a (click)="more(quot.id)" href="javascript:void(0);" *ngIf="quot.str.length>100 && notClick != quot.id">. . .</a>
+</p>
